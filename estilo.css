@@ -1,9 +1,54 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?-fhlsgk');
+	src:url('fonts/icomoon.eot?#iefix-fhlsgk') format('embedded-opentype'),
+		url('fonts/icomoon.woff?-fhlsgk') format('woff'),
+		url('fonts/icomoon.ttf?-fhlsgk') format('truetype'),
+		url('fonts/icomoon.svg?-fhlsgk#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-star2:before {
+	content: "\e602";
+	color: #FFBE2C;
+	margin-right: 0.4em;
+	position: relative;
+	top: 0.1em;
+}
+.icon-keyboard:before {
+	content: "\e600";
+	margin-right: 0.8em;
+}
+.icon-arrow-up:before {
+	content: "\e603";
+	color:#104000;
+}
+.icon-arrow-down:before {
+	content: "\e604";
+	color:#DD4F24;
+}
+
 a{
 	color: #22BCE0;
+	text-decoration: none;
 }
 body{
 	background: #EEE;
-	font-family: Arial;
+	font-family: "Open Sans";
 	font-size: 16px;
 }
 figure{
@@ -35,8 +80,6 @@ footer p:last-child:before{
 	content: "- "
 
 }
-
-
 
 header{
 	background: #343b54;
@@ -74,13 +117,13 @@ header #logo img{
 }
 nav{
 	background: #80BCA3;
-	padding: 0 0.5em;
+	padding: 0 6em 0 0;
+	position: relative;
 }
 nav ul{
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	position: relative;
 }
 nav ul #publicar_nav{
 	position: absolute;
@@ -104,6 +147,7 @@ nav ul li a{
 	color: white;
 	display: block;
 	padding: 0.5em 0;
+	text-decoration: none;
 }
 #contenido{
 	margin: 1em;
@@ -165,6 +209,22 @@ nav ul li a{
 	top: 100%;
 	width: 90%;
 }
+
 #contenido .item .votacion .comentarios_item, #contenido .item .votacion .guardar_item{
  float: right;
+}
+
+
+@media screen and (min-width: 768px){
+	#contenido{
+		overflow: hidden;
+	}
+	#contenido .item{
+		float: left;
+		width: 49%;
+	}
+	#contenido .item:nth-child(odd){
+		margin-right: 2%;
+	}
+
 }
