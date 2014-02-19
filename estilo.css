@@ -46,6 +46,9 @@ a{
 	color: #22BCE0;
 	text-decoration: none;
 }
+aside{
+	display: none;
+}
 body{
 	background: #EEE;
 	font-family: "Open Sans";
@@ -108,11 +111,17 @@ header #avatar img{
 	border-radius: 50%;
 	width: 55px;
 }
-
-header #logo img{
+header #logo{
 	border-right: 1px solid white;
 	margin-right: 0.5em;
 	padding-right: 0.5em;
+}
+header #logo img{
+	-webkit-transition:0.5s;
+	width: 52px;
+}
+header #logo img:hover{
+	-webkit-transform: rotate(360deg);
 	width: 52px;
 }
 nav{
@@ -139,6 +148,9 @@ nav ul #publicar_nav a{
 	text-decoration: none;
 	text-shadow: rgba(0,0,0,0.5) 2px 2px 5px;
 }
+nav ul #publicar_nav a:hover{
+	box-shadow: 0 0 10px white;
+}
 nav ul li{
 	display: inline-block;
 	margin: 0 1.2em 0 0;
@@ -148,6 +160,10 @@ nav ul li a{
 	display: block;
 	padding: 0.5em 0;
 	text-decoration: none;
+	-webkit-transition:0.5s;
+}
+nav ul li a:hover{
+	background: #343b54;
 }
 #contenido{
 	margin: 1em;
@@ -227,4 +243,15 @@ nav ul li a{
 		margin-right: 2%;
 	}
 
+}
+@media screen and (min-width: 1000px){
+	aside{
+		display: block;
+		float: right;
+		margin: 1em;
+		width: 25%;
+	}
+	aside video{
+		width: 100%;
+	}
 }
