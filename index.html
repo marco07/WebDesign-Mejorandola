@@ -31,6 +31,11 @@
 			</li>
 		</ul>
 	</nav>
+	<form action="#" id="formulario" class="formulario">
+		<input type="text" placeholder="Titulo" id="titulo" required>
+		<input type="url" placeholder="Link" id="link" required>
+		<input type="submit" id="enviar" value="Enviar">		 
+	</form>
 	<aside>
 		<video width="320" height="240" controls autoplay>
 			<source src="lecturas.m4v" type="video/mp4">
@@ -201,5 +206,9 @@
 		</p>
 		<p>mejorando.la 2014</p>
 	</footer>
+	<!-- siempre incluir jquery antes que los demas script-->
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="formulario.js"></script>
+	
 </body>
 </html>
