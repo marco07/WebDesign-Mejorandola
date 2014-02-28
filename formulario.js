@@ -6,12 +6,12 @@ var         $form       = $('#formulario'),
 			ss          = sessionStorage,
 			ls          = localStorage;
 
-if (ls.getItem('autosave')) {     /*para que funcione se tiene que inicializar autosave en localstorage en 1*/
+if (ls.getItem('autosave')) {
 	$titulo.val(ss.getItem('titulo'));
 	$url.val(ss.getItem('url'));
 }
 
-var id = setInterval(function(){ //solo funciona en un server local
+var id = setInterval(function(){
 	ss.setItem('titulo', $titulo.val());
 	ss.setItem('url', $url.val());
 }, 1000);
