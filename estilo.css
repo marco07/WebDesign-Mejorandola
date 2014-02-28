@@ -50,6 +50,25 @@ a{
 aside{
 	display: none;
 }
+aside #clima,img {
+	display: inline;
+}
+aside #clima{
+	background: #22BCE0;
+	border-radius: 0.4em;
+	color: #FFF;
+	text-align: right;
+	margin-left: 7px;
+	padding: 0.4em;
+	vertical-align: middle;
+}
+aside #geo{
+	border-radius: 0.5em;
+	border: 1px solid #999;
+	box-shadow: rgba(0,0,0,0.5) 0 0 7px;
+	margin-bottom: 20px;
+	padding: 0.5em;
+}
 body{
 	background: #EEE;
 	font-family: "Open Sans";

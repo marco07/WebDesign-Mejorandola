@@ -23,11 +23,11 @@ function geocallback(datos){
 	var info   = datos.query.results.Result;
 	var pais   = info.country;
 	var ciudad = info.city;
-	var barrio = info.neigborhood;
+	var codigopais = info.countrycode;
 	var woeid  = info.woeid; //volor unico que captura yahoo para obtener el clima
 
 
-	var tmp = '<p><strong>'+barrio+'</strong><br>'+ciudad+','+pais+' ('+woeid+')</p>';
+	var tmp = '<p><strong>'+pais+'</strong><br>'+ciudad+ ', ' +codigopais+ ' ('+woeid+')</p>';
 	$('#geo').prepend(tmp);
 
 	obtenerClima(woeid);
@@ -54,11 +54,13 @@ function climacallback(datos){
 	var temp = clima.item.condition.temp;
 	var code = clima.item.condition.code;
 	var unit = clima.units.temperature;
+	var date = clima.item.condition.date;
 	var img  = new Image();
 	img.src  ="http://l.yimg.com/a/i/us/we/52/"+code+".gif";
 	$('#clima')
-		.html('<strong>'+temp+'</strong>'+unit+'º')
+		.html(' <strong>'+temp+'</strong> '+unit+'º'+' '+date)
 		.prepend(img);
+
 		
 }
 
